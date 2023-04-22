@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,900;1,300&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,18 +11,38 @@ html {
 body {
   height: 100%;
 }
+header {
+  margin: auto;
+  padding-top: 8px;
+  text-align: center;
+  font-family: Asap, sans-serif;
+  width: 510px;
+  background-color: #eb4242;
+}
+
+/* button */
+.btn-div {
+  text-align: center;
+  margin: 2%;
+}
+.changeNum {
+  padding: 5px;
+  background-color: #5293d9;
+  color: #ebeff5;
+}
 /* 3. make container flex */
 .grid-container {
   display: flex;
   flex-wrap: wrap;
-  width: 500px;
-  height: 500px;
+  width: 510px;
+  height: 510px;
   margin: auto;
+  border: 5px #eb4242 solid;
 }
 
 /*make different classes for hovered squares*/
 .square {
-  border: 0.5px solid black;
+  border: 0.5px solid #d5d7db;
   background-color: white;
 }
 
