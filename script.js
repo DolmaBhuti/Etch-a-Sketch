@@ -3,36 +3,29 @@ const gridContainer = document.querySelector(".grid-container");
 let squareDiv;
 
 //3.  hover effect.  when a square is entered, change the background color
-function mouseHover(node) {
+function addHoverEffect(node) {
   node.addEventListener("mouseover", () => {
     node.classList.replace("square", "color");
   });
-  // node.addEventListener("mouseleave", () => {
-  //   node.style.cssText = "background-color: white";
-  // });
-  // node.addEventListener("mouseenter", (event) => {
-  //   node.style.cssText = "border: green; background-color: green;";
-  // });
 }
 //2. while (count <= num * num)
 //   create a div
 function createSquare(numOfSquares) {
   console.log("in create Square");
-  const dim = 950 / numOfSquares;
+  const dim = 500 / numOfSquares;
+
   console.log("width and height: " + dim);
   for (let i = 0; i < numOfSquares * numOfSquares; i++) {
     squareDiv = document.createElement("div");
-    // squareDiv.style.width = dim + "px";
-    // squareDiv.style.height = dim + "px";
-
     squareDiv.style.cssText = `width: ${dim}px; height: ${dim}px`;
     squareDiv.classList.add("square");
+
     //create hover effect
-    mouseHover(squareDiv);
+    addHoverEffect(squareDiv);
     gridContainer.appendChild(squareDiv);
   }
 }
-
+//4. Add a button to the top of the screen that will send the user a popup asking for the number of squares per side for the new grid
 createSquare(16);
 
 /*
