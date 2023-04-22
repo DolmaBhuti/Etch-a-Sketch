@@ -18,9 +18,16 @@ body {
   margin: auto;
 }
 
-/*make the squares*/
-.grid-container > div {
-  border: 1px solid black;
+/*make different classes for hovered squares*/
+.square {
+  border: 0.5px solid black;
+  background-color: white;
+
   /* width: 59.375px;
   height: 59.375px; */
+}
+
+.color {
+  background-color: gray;
+  border: 0.5px solid black;
 }
