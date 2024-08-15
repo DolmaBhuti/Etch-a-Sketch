@@ -1,18 +1,32 @@
 //1. get reference to grid-container div
 const gridContainer = document.querySelector(".grid-container");
+const gridDimension = 400;
 let squareDiv;
 
 //3.  hover effect.  when a square is entered, change the background color
 function addHoverEffect(node) {
   node.addEventListener("mouseover", () => {
+    var style = document.createElement("style");
+    style.type = "text/css";
+    style.innerHTML = `.color { background: ${generateNewColor()}; }`;
+    document.head.appendChild(style);
     node.classList.replace("square", "color");
   });
+}
+
+function generateNewColor() {
+  let red = Math.floor(Math.random() * 255);
+  let green = Math.floor(Math.random() * 255);
+  let blue = Math.floor(Math.random() * 255);
+
+  let rgb = `rgb(${red}, ${green}, ${blue})`;
+  return rgb;
 }
 //2. while (count <= num * num)
 //   create a div
 function createSquare(numOfSquares) {
   console.log("in create Square");
-  const dim = 500 / numOfSquares;
+  const dim = gridDimension / numOfSquares;
 
   console.log("width and height: " + dim);
   for (let i = 0; i < numOfSquares * numOfSquares; i++) {

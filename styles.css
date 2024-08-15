@@ -9,21 +9,32 @@ html {
   height: 100%;
 }
 body {
-  height: 100%;
+  height: 430px;
+  width: 430px;
+  margin: auto;
+  margin-top: 24px;
+  font-family: Asap, sans-serif;
 }
 header {
-  margin: auto;
   padding-top: 8px;
   text-align: center;
-  font-family: Asap, sans-serif;
-  width: 510px;
+  width: 430px;
   background-color: #eb4242;
+  border-radius: 20px 20px 0 0;
+  color: white;
 }
 
 /* button */
 .btn-div {
   text-align: center;
-  margin: 2%;
+  margin: 10px;
+}
+.btn-div > button {
+  background-color: #eb4242;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
 }
 .changeNum {
   padding: 5px;
@@ -34,19 +45,15 @@ header {
 .grid-container {
   display: flex;
   flex-wrap: wrap;
-  width: 510px;
-  height: 510px;
-  margin: auto;
-  border: 5px #eb4242 solid;
+  width: 430px;
+  height: 430px;
+  border: 15px #eb4242 solid;
+  border-radius: 0 0 20px 20px;
 }
 
 /*make different classes for hovered squares*/
 .square {
   border: 0.5px solid #d5d7db;
-  background-color: white;
-}
-
-.color {
-  background-color: gray;
-  border: 0.5px solid black;
+  background-color: black;
+  opacity: 0;
 }
